@@ -1,16 +1,76 @@
-# React + Vite
+# SwiggyLite (Food Delivery UI)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive food delivery web app inspired by Swiggy, built with React + Vite. It includes a Home page with hero/search, an Explore page with filters, a Contact page, and a Login/Profile page (mock auth with localStorage).
 
-Currently, two official plugins are available:
+## Tech Stack
+- React (Functional Components)
+- React Router DOM (SPA navigation) [web:12]
+- Vite (fast dev server + build) [web:114]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Home page
+  - Hero section + location input (manual + basic geolocation detect)
+  - Search bar UI
+  - Featured restaurants + offers section
+- Explore page
+  - Restaurant listing cards (image, rating, cuisine, time, price tier)
+  - Filters: price, minimum rating, veg/non-veg + search
+  - Responsive grid
+- Contact page
+  - Contact form + support details + social links
+- Login/Profile
+  - Login/Signup UI (demo)
+  - Profile view (name/email/orders) + logout
+  - Persists session in `localStorage`
 
-## React Compiler
+## Folder Structure
+```
+src/
+  components/
+  pages/
+  data/
+  styles/
+  App.jsx
+  main.jsx
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting Started (Local Setup)
+### 1) Clone
+```
+git clone https://github.com/<your-username>/<your-repo>.git
+cd <your-repo>
+```
 
-## Expanding the ESLint configuration
+### 2) Install dependencies
+```
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 3) Start dev server
+```
+npm run dev
+```
+Vite will print the local URL in the terminal. [web:114]
+
+## Build & Preview (Production)
+### Build
+```
+npm run build
+```
+This generates the production build (usually in `dist/`). [web:114]
+
+### Preview the build locally
+```
+npm run preview
+```
+Vite preview lets you test the built app locally. [web:115]
+
+## Notes
+- This project uses mock restaurant/menu data in `src/data/restaurants.js`.
+- Authentication is demo-only using `localStorage` (no backend).
+
+## Deployment
+You can deploy the `dist/` folder to Netlify / Vercel / GitHub Pages (static hosting). Refer to Vite static deploy guidance if needed. [web:115]
+
+## License
+MIT (or update as needed)
